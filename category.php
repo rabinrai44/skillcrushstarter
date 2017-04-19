@@ -1,11 +1,6 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme and one
- * of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query,
- * e.g., it puts together the home page when no home.php file exists.
+ * The template for displaying Category pages
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
@@ -16,15 +11,25 @@
 
 get_header(); ?>
 
-<section class="index-page">		
-	<div class="main-content">
-		<?php if ( have_posts() ): ?>
+<section class="category-page">
+	<?php if ( have_posts() ): ?>
+		<header class="page-header">
+			<h1 class="page-title"><?php printf( __( 'Posts categorized as <span>%s</span>', 'skillcrushstarter' ), single_cat_title( '', false ) ); ?></h1>
+		</header>
+	<?php endif; ?>
+
+	<div id="main-content" class="main-content">
+		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part('content', get_post_format()); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
+		<?php else: ?>
+			<article>
+				<h4>No posts found!</h4>
+			</article>
 		<?php endif; ?>
 	</div>
-	
+
 	<?php get_sidebar(); ?>
 
 	<?php if ( have_posts() ): ?>
