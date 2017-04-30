@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Skillcrush_Starter
- * since Skillcrush Starter 1.0
+ * @since Skillcrush Starter 1.0
  */
 ?>
 <div id="sidebar">

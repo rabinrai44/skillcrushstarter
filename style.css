@@ -1,5 +1,5 @@
 /*
-Theme Name: Skillcrush Starter Theme Custom Homepage Challenge
+Theme Name: Skillcrush Starter Theme Blog Page Excerpts Challenge
 Author: the Skillcrush team
 Author URI: http://skillcrush.com
 Description: This theme is for use in Skillcrush 103, Skillcrush 203 and the Skillcrush WordPress Developer Career Blueprint.
@@ -206,6 +206,7 @@ body {
 	float: left;
 	width: 31%;
 }
+
 /* sidebar */
 #sidebar {
 	padding-top: 20px;
@@ -537,7 +538,7 @@ body {
 
 /* Homepage */
 .home {
-	background: url(img/Skillcrush_Computer.jpg) no-repeat center 0;
+	background: url(img/Skillcrush_Mountains.jpg) no-repeat center 0;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -545,7 +546,7 @@ body {
 	min-height: 100%;
 }
 .home .page-header {
-	display: block;
+	display: none;
 }
 .home .main-content {
 	width: 100%;
